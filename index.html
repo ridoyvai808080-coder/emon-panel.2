@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMON Panel</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;font-family:Arial,sans-serif;background:radial-gradient(circle at top,#1d2a4a,#090d18 45%,#05070c);color:#fff;display:flex;justify-content:center;align-items:center;padding:15px}
+.container{width:100%;max-width:520px}.card{background:rgba(20,25,40,.94);border:1px solid rgba(255,255,255,.1);border-radius:25px;padding:30px 22px;text-align:center;box-shadow:0 20px 60px #0008}
+.logo{width:82px;height:82px;margin:0 auto 15px;border-radius:22px;background:linear-gradient(135deg,#ff7a00,#ff2600);display:flex;align-items:center;justify-content:center;font-size:38px}
+h1{font-size:30px;color:#ff8a00;margin-bottom:8px}h2{font-size:25px;margin-bottom:10px}
+.subtitle{color:#b8c0d4;font-size:16px;line-height:1.6;margin-bottom:25px}
+.ad-section{background:linear-gradient(145deg,#171d2d,#0f1421);border-radius:18px;padding:18px;border:1px solid #ffffff14;margin-bottom:22px}
+.ad-section img{width:100%;display:block;border-radius:14px;margin-bottom:18px}.ad-title{font-size:18px;font-weight:bold;margin-bottom:15px}
+.login-btn,.download-btn{width:100%;border:0;border-radius:14px;padding:15px;font-size:18px;font-weight:bold;cursor:pointer;color:#fff}
+.login-btn{background:linear-gradient(135deg,#ff8a00,#ff3d00)}.social-links{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
+.social-links a{text-decoration:none;color:#fff;padding:12px 5px;border-radius:12px;font-size:14px;font-weight:bold}.facebook{background:#1877f2}.tiktok{background:#111;border:1px solid #444}.youtube{background:#f00}
+.help{margin-top:22px;color:#aeb6ca;font-size:14px}.help a{color:#20e0ff;text-decoration:none;font-weight:bold}
+#page2{display:none}.input-box{width:100%;padding:16px;margin:18px 0 12px;border:1px solid #39445c;border-radius:14px;outline:none;background:#0d1220;color:#fff;font-size:17px;text-align:center}
+.message{min-height:25px;margin:8px 0;font-size:16px;font-weight:bold}.success{display:none;margin-top:20px;padding:22px;border-radius:18px;background:linear-gradient(145deg,#0b3b29,#09251d);border:1px solid #00ff9625}
+.success-icon{font-size:42px;margin-bottom:10px}.success h3{color:#00e894;margin-bottom:8px;font-size:22px}.success p{color:#b9d8cc;font-size:14px;margin-bottom:18px}
+.download-btn{display:block;text-decoration:none;background:linear-gradient(135deg,#00d084,#00a866);margin-bottom:18px}.success-social{display:flex;flex-direction:column;gap:9px}.success-social a{color:#d8fff1;text-decoration:none;padding:10px;background:#ffffff0d;border-radius:10px}
+.back-btn{margin-top:18px;background:transparent;border:1px solid #39445c;color:#bfc7d9;padding:11px 18px;border-radius:10px;cursor:pointer}.footer{margin-top:20px;color:#69738a;font-size:12px}
+@media(max-width:480px){.card{padding:25px 16px}h1{font-size:27px}}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="card" id="page1">
+<div class="logo">🚀</div>
+<h1>EMON PANEL</h1>
+<p class="subtitle">আপনার অ্যাপ ডাউনলোড করতে নিচের বাটনে ক্লিক করুন এবং পরবর্তী ধাপে পাসওয়ার্ড দিন।</p>
+<div class="ad-section">
+<img src="https://via.placeholder.com/600x200?text=EMON+PANEL" alt="EMON Panel">
+<div class="ad-title">🔐 অ্যাক্সেস নিতে এখনই লগইন করুন</div>
+<button class="login-btn" onclick="showPasswordPage()">✅ এখনই লগইন করুন</button>
+</div>
+<div class="social-links">
+<a class="facebook" href="https://www.facebook.com/share/19fuzSVVhQ/" target="_blank">📘 Facebook</a>
+<a class="tiktok" href="https://www.tiktok.com/@ffidsaler1587" target="_blank">🎵 TikTok</a>
+<a class="youtube" href="https://youtube.com/@toufikvai2010" target="_blank">▶️ YouTube</a>
+</div>
+<div class="help">📞 হেল্পলাইন: <a href="https://wa.me/8801344839207" target="_blank">+8801344839207</a></div>
+<div class="footer">© 2026 EMON Panel. All Rights Reserved.</div>
+</div>
+
+<div class="card" id="page2">
+<div class="logo">🔐</div>
+<h2>পাসওয়ার্ড দিন</h2>
+<p class="subtitle">EMON Panel ব্যবহার করতে সঠিক পাসওয়ার্ড লিখুন।</p>
+<input type="password" id="password" class="input-box" placeholder="Password লিখুন" autocomplete="off">
+<button class="login-btn" onclick="checkPassword()">🔓 লগইন করুন</button>
+<div id="message" class="message"></div>
+<div id="successMessage" class="success">
+<div class="success-icon">🎉</div>
+<h3>সফলভাবে লগইন হয়েছে!</h3>
+<p>আপনার অ্যাপটি এখন ডাউনলোড করতে পারবেন।</p>
+<a href="EMON-Panel-Sance-2.0.apk" class="download-btn">📥 এখনই APK ডাউনলোড করুন</a>
+<div class="success-social">
+<a href="https://www.facebook.com/share/19fuzSVVhQ/" target="_blank">📘 Facebook Page</a>
+<a href="https://www.tiktok.com/@ffidsaler1587" target="_blank">🎵 TikTok</a>
+<a href="https://youtube.com/@toufikvai2010" target="_blank">▶️ YouTube Channel</a>
+<a href="https://wa.me/8801344839207" target="_blank">💬 WhatsApp Help</a>
+</div>
+</div>
+<button class="back-btn" onclick="goBack()">← আগের পেজে ফিরে যান</button>
+<div class="footer">EMON Panel • Secure Access</div>
+</div>
+</div>
+<script>
+function showPasswordPage(){page1.style.display="none";page2.style.display="block";password.focus()}
+function checkPassword(){
+const p=password.value.trim();
+if(p==="emonsance"){message.innerHTML="✅ পাসওয়ার্ড সঠিক!";message.style.color="#00e894";successMessage.style.display="block"}
+else{message.innerHTML="❌ ভুল পাসওয়ার্ড! আবার চেষ্টা করুন।";message.style.color="#ff4d67";successMessage.style.display="none"}
+}
+password.addEventListener("keydown",e=>{if(e.key==="Enter")checkPassword()});
+function goBack(){page2.style.display="none";page1.style.display="block";password.value="";message.innerHTML="";successMessage.style.display="none"}
+</script>
+</body>
+</html>
